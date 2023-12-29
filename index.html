@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAME</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white">
+    <div class="w-full bg-white border-b-2 p-4 flex items-center">
+      <img
+        src="https://i.pravatar.cc/100"
+        alt="Profile"
+        class="h-16 w-16 rounded-full"
+      />
+      <div id="searchContainer" class="ml-8 p-2 rounded flex items-center">
+        <i
+          id="searchIcon"
+          class="fas fa-search text-pink-500 cursor-pointer fa-lg"
+        ></i>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="What are you in the mood for?"
+          class="ml-2 pl-5 outline-none bg-transparent w-0 h-12"
+        />
+      </div>
+    </div>
+
+    <!-- Main layout -->
+    <div class="flex">
+      <!-- Navigation Column -->
+      <div class="w-10 h-screen bg-transparent pr-4 border-r-2">
+        <div
+          class="bg-white text-pink-500 pr-0 text-lg pr-2 mb-4 border-r-2 w-16 h-10 border-b-2 flex items-center justify-end"
+        >
+          R
+        </div>
+
+        <!-- Nav icons -->
+        <div class="flex flex-col space-y-4 pl-3">
+          <i class="fas fa-newspaper text-gray-300"></i>
+          <i class="fas fa-pause text-gray-300"></i>
+          <i class="fas fa-bars-staggered text-gray-300"></i>
+        </div>
+        <div
+          class="bg-white text-pink-500 mt-6 pr-0 text-lg pr-2 mb-8 border-r-2 border-t-2 w-16 h-10 border-b-2 flex items-center justify-end"
+        >
+          <i class="fas fa-history"></i>
+        </div>
+      </div>
+
+      <!-- Content area -->
+      <div class="flex-1 p-8 pl-24">
+        <div class="grid grid-cols-3 gap-4">
+          <!-- Row 1 -->
+          <div class="bg-gray-200 p-4 h-32"></div>
+          <div class="bg-gray-200 p-4 h-48"></div>
+          <div class="bg-gray-200 p-4 h-40"></div>
+
+          <!-- Row 2 -->
+          <div class="bg-gray-200 p-4 h-36"></div>
+          <div class="bg-gray-200 p-4 h-52"></div>
+          <div class="bg-gray-200 p-4 h-44"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("searchIcon")
+        .addEventListener("click", function () {
+          var searchInput = document.getElementById("searchInput");
+          if (searchInput.classList.contains("w-0")) {
+            searchInput.classList.remove("w-0");
+            searchInput.classList.remove("bg-transparent");
+            searchInput.classList.add("bg-gray-200");
+            searchInput.classList.add("w-96");
+          }
+        });
+    </script>
+  </body>
+</html>
